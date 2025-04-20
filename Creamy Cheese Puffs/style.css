@@ -34,7 +34,7 @@ body {
 }
 
 .logo-img {
-    height: 100px;
+    height: 50px;
     margin-right: 15px;
 }
 
@@ -52,10 +52,6 @@ body {
     margin-bottom: 25px;
 }
 
-.form-area {
-    width: 100%;
-}
-
 .form-area h2 {
     font-size: 24px;
     font-weight: 600;
@@ -69,7 +65,49 @@ body {
     margin-bottom: 25px;
 }
 
-#signInForm input[type="text"] {
+.info-text {
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.info-text strong {
+    color: #ecf0f1;
+    font-weight: 600;
+}
+
+.input-label {
+    display: block;
+    font-size: 14px;
+    color: #bdc3c7;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+.help-text {
+    font-size: 13px;
+    color: #bdc3c7;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.help-text a {
+    color: #81C7D4;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+.form-area {
+    width: 100%;
+}
+
+.form-area input[type="text"],
+.form-area input[type="password"] {
     width: 100%;
     padding: 15px 20px;
     border: none;
@@ -79,10 +117,23 @@ body {
     color: #333;
     margin-bottom: 10px;
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 0;
 }
 
-#signInForm input[type="text"]::placeholder {
+.form-area input::placeholder {
     color: #999;
+}
+
+.code-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.code-input-group input[type="text"] {
+    flex-grow: 1;
+    margin-bottom: 0;
 }
 
 .forgot-link {
@@ -128,6 +179,7 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
+    flex-shrink: 0;
 }
 
 #next-button:hover {
@@ -136,4 +188,32 @@ body {
 
 #next-button:active {
     transform: scale(0.98);
+}
+
+.resend-button {
+    background-color: #81C7D4;
+    color: #2c3e50;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    flex-shrink: 0;
+}
+
+.resend-button:hover {
+    background-color: #a8dadc;
+}
+
+.resend-button:active {
+    transform: scale(0.98);
+}
+
+.form-actions-right {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
 }

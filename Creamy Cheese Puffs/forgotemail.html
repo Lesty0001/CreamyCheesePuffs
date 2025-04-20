@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to the SAME CSS file as the sign-in page -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Jeep2Go - Forgot Password</title>
+</head>
+<body>
+    <div class="signin-container">
+        <div class="logo-area">
+            <img src="jeep2go-logo-cut.png" alt="Jeep2Go Logo" class="logo-img">
+        </div>
+
+        <!-- Use same class as "Welcome!" for similar styling, or create a new one -->
+        <h1 class="welcome-text">Forgot Password</h1>
+
+        <div class="form-area">
+            <p class="info-text">
+                we sent a verification code in<br>
+                <strong>example@gmail.com</strong>
+            </p>
+
+            <form action="#" id="forgotPasswordForm">
+                <label for="verification-code" class="input-label">Enter the verification code</label>
+                <div class="code-input-group">
+                    <input type="text" placeholder="" id="verification-code" name="verification-code" required maxlength="6">
+                    <button type="button" class="resend-button">Resend Code</button>
+                </div>
+
+                <p class="help-text">
+                    didn't get the code? <a href="#">Learn more.</a>
+                </p>
+
+                <!-- Container to push the button to the right -->
+                <div class="form-actions-right">
+                     <button type="button" id="next-button">Next</button>
+                     <!-- Reusing the button ID/style from the previous screen -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Optional: Link to your JS if needed -->
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
