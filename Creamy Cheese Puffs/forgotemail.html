@@ -25,7 +25,6 @@
                 We sent a verification code to<br>
                 <strong id="user-contact-info">example@gmail.com</strong>
             </p>
-
             <form action="#" id="forgotPasswordForm">
                 <label for="verification-code" class="input-label">Enter the verification code</label>
                 <div class="code-input-group">
@@ -38,37 +37,12 @@
                 </p>
 
                 <div class="form-actions-right">
-                     <button type="button" id="next-button">Next</button>
+                    <button type="button" id="next-button">Next</button>
                 </div>
             </form>
         </div>
     </div>
-
-    <script>
-        document.getElementById('resendCodeBtn').addEventListener('click', function() {
-            alert('Verification code resent (simulation).');
-            this.disabled = true;
-            this.textContent = 'Resending...';
-            setTimeout(() => {
-                this.disabled = false;
-                this.textContent = 'Resend Code';
-            }, 30000);
-        });
-
-        document.getElementById('next-button').addEventListener('click', function() {
-            const codeInput = document.getElementById('verification-code');
-            const code = codeInput.value;
-
-            if (code && code.length === 6 && /^\d{6}$/.test(code)) {
-                console.log('Verification code entered:', code);
-                window.location.href = 'createPassword.html'; 
-            } else {
-                alert('Please enter the 6-digit verification code.');
-                codeInput.focus();
-            }
-        });
-
-    </script>
+<script src="scripts/forgotEmail.js"></script>
 
 </body>
 </html>
