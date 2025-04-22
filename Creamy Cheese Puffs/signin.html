@@ -32,68 +32,7 @@
             </form> 
         </div> 
     </div> 
-    <script src="signinPass.js"></script>
-    <script>
-        const createAccountLink = document.getElementById('createAccountLink');
-        const formActions = document.querySelector('.form-actions');
-        let optionsVisible = false;
-
-        createAccountLink.addEventListener('click', function(event) {
-            event.preventDefault(); 
-
-            if (!optionsVisible) {
-                // Remove existing options if they were somehow left over
-                const existingOptions = formActions.querySelector('.account-options');
-                if (existingOptions) {
-                    existingOptions.remove();
-                }
-
-                // Create the container for the new buttons
-                const optionsDiv = document.createElement('div');
-                optionsDiv.classList.add('account-options');
-                optionsDiv.style.marginTop = '15px'; 
-                optionsDiv.style.width = '100%'; 
-
-                // Create Driver button
-                const driverButton = document.createElement('a');
-                driverButton.href = 'signupDriver.html';
-                driverButton.textContent = 'For Driver';
-                driverButton.classList.add('account-option-button');
-
-                // Create Passenger button
-                const passengerButton = document.createElement('a'); 
-                passengerButton.href = 'signupPassenger.html'; 
-                passengerButton.textContent = 'For Passenger';
-                passengerButton.classList.add('account-option-button'); 
-
-                // Append buttons to the options div
-                optionsDiv.appendChild(driverButton);
-                optionsDiv.appendChild(passengerButton);
-
-                // Insert the options div before the form actions container
-                formActions.parentNode.insertBefore(optionsDiv, formActions);
-
-                optionsVisible = true;
-            } else {
-                // Remove the options if the link is clicked again
-                 const optionsDiv = formActions.parentNode.querySelector('.account-options');
-                 if (optionsDiv) {
-                     optionsDiv.remove();
-                 }
-                 optionsVisible = false;
-            }
-        });
-
-        document.getElementById('next-button').addEventListener('click', function() {
-             // Basic validation (could be more complex)
-             var username = document.getElementById("username").value;
-             if (username) {
-                 window.location.href = "password.html";
-             } else {
-                 alert("Please enter your email or phone number.");
-             }
-        });
-
-    </script>
+    <script src="scripts/signinPass.js"></script>
+    <script src="scripts/signIn.js"></script>
 </body>
 </html>
